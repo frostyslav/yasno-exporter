@@ -115,7 +115,7 @@ class Worker:
 
             if blackout:
                 metric = self.get_metric_by_yasno_key(self.BLACKOUT)
-                metric.set(1, group_name)
+                metric.set(-500, group_name)
                 metric = self.get_metric_by_yasno_key(self.POSSIBLE_BLACKOUT)
                 metric.set(0, group_name)
                 metric = self.get_metric_by_yasno_key(self.NO_BLACKOUT)
@@ -124,7 +124,7 @@ class Worker:
                 metric = self.get_metric_by_yasno_key(self.BLACKOUT)
                 metric.set(0, group_name)
                 metric = self.get_metric_by_yasno_key(self.POSSIBLE_BLACKOUT)
-                metric.set(1, group_name)
+                metric.set(-250, group_name)
                 metric = self.get_metric_by_yasno_key(self.NO_BLACKOUT)
                 metric.set(0, group_name)
             else:
@@ -133,7 +133,7 @@ class Worker:
                 metric = self.get_metric_by_yasno_key(self.POSSIBLE_BLACKOUT)
                 metric.set(0, group_name)
                 metric = self.get_metric_by_yasno_key(self.NO_BLACKOUT)
-                metric.set(1, group_name)
+                metric.set(500, group_name)
 
 
 def signal_handler(signum, frame):

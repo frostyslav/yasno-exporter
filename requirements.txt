@@ -1,0 +1,4 @@
+icalendar>=5.0.13
+prometheus-client>=0.20.0
+pytz>=2024.1
+requests>=2.32.3
